@@ -1,0 +1,142 @@
+/* GERAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+/* CONTAINERS */
+
+#main-container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+#address-container,#form-container{
+    flex: 1 1 0;
+    text-align: left;
+    height: 100%;
+}
+/* ADDRESS CONTAINER*/
+
+#address-container{
+    background-image: url(project_bg.jpg);
+    background-size: cover;
+    background-position: -130px;
+    color: white;
+    position: relative;
+}
+.fade{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+}
+#address-content{
+    position: absolute;
+    top: 25vh;
+    left: 35%;
+    width: 300px;
+}
+#address-content h2{
+    color: green;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px;
+}
+#address-content ion-icon{
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+#address-content p{
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+/* FORMULÁRIO   */
+#form-container{
+    padding-top: 50px;
+    text-align: center;
+}
+#form-container h2{
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+#contact-form{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#contact-form label,#contact-form textarea,#contact-form input{
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    color: #aaa;
+}
+#contact-form label{
+    color: black;
+    opacity: .7;
+    font-weight: bold;
+    border-bottom: none;
+}
+#contact-form input{
+    margin-bottom: 15px;
+}
+#contact-form input::placeholder,#contact-form textarea ::placeholder{
+     color: black;
+     opacity: .6;
+}
+#contact-form input[type="submit"] {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 300px;
+    margin: 30px auto;
+    border: 2px solid transparent;
+    transition: 1s;
+}
+#contact-form input[type="submit"]:hover{
+    border-color: green;
+    color: green;
+    background-color: white;
+}
+
+/* RESPONSIVO */
+@media(max-width:450px) {
+    #main-container{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    #form-container,#address-container{
+        flex: 1 1 100%;
+    }
+    #form-container{
+        order: -1;
+        padding: 20px;
+    }
+    #form-container h2{
+        margin-bottom: 25px;
+    }
+    #contact-form{
+        width: 100%;
+    }
+    #contact-form label,#contact-form textarea,#contact-form input{
+    color: #aaa;
+    }
+    #adress-container{
+        background-position: 0;
+        height: 500px;
+    }
+    .fade{
+        opacity: .9;
+    }
+    #address-content{
+        left: 25%;
+        top: 25%;
+    }
+}
